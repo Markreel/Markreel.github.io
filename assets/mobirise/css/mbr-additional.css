@@ -1111,7 +1111,7 @@ section.lazy-placeholder:after {
 }
 .cid-sl8JMffKu6 {
   padding-top: 0px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   background-color: #232323;
 }
 .cid-sl8JMffKu6 h2 {
@@ -1180,6 +1180,22 @@ section.lazy-placeholder:after {
 .cid-sl8JMffKu6 P {
   color: #ffffff;
   text-align: left;
+}
+.cid-slPun343YA {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  background-color: #232323;
+}
+.cid-slPun343YA .mbr-text,
+.cid-slPun343YA blockquote {
+  color: #767676;
+}
+.cid-slPun343YA .mbr-text {
+  color: #ffffff;
+  text-align: left;
+}
+.cid-slPun343YA .mbr-text P {
+  text-align: center;
 }
 .cid-slw5YjZDJh {
   padding-top: 30px;
