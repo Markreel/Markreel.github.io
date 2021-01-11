@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.12.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/profilepicture-1-633x633.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Object Pooling</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="menu cid-sgkJWo4uqN" once="menu" id="menu1-5r">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    
+                         <a href="page1.html#top"><img src="assets/images/profilepicture-1-633x633.png" alt="Me" title="" class="roundedImage" style="height: 3.8rem;"></a>
+                    
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="index.html#top">
+                        Mark Meerssman | Markreel (Looking for an Internship)</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="https://koalafish-studios.itch.io/" target="_blank"><span class="mobi-mbri mobi-mbri-rocket mbr-iconfont mbr-iconfont-btn"></span>
+                        
+                        KoalaFish Studios<br></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="index.html#content1-9e"><span class="mobi-mbri mobi-mbri-layers mbr-iconfont mbr-iconfont-btn"></span>
+                        
+                        Projects</a>
+                </li></ul>
+            
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/f">simple web maker</a></section><section class="header6 cid-sgpwpRXL1v" data-bg-video="https://youtu.be/hWweZSJ0TKc" id="header6-6p">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);">
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-1">Object Pooling</h1>
+                <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+                    A project in which I experimented with object pooling.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+
+<section class="header1 cid-sgkJWovrdT" id="header16-5s">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 align-center">
+                
+                
+                <p class="mbr-text pb-3 mbr-fonts-style display-7">This article focusses entirely on the <strong><em>programming</em></strong> experience I gained from this project and<em> <strong>does not involve any design.</strong></em><br></p>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="Object Pooling.html#header16-5s">SUMMARY<br></a> <a class="btn btn-md btn-success display-4" href="Object Pooling.html#CodeAnchor">&nbsp; &nbsp; CODE &nbsp; &nbsp;</a></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mbr-section content4 cid-sgkJWpODvL" id="content4-5v">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Short Summary</h2>
+                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">In the summer of 2020, I decided I wanted to experiment with object pooling. Our projects at school usually involve focusing more on creating a finished product rather than optimising our work, so I've never really found a good moment to create and implement an object pooling system.<br><br>To test and visualize the system, I created a simple showcase scene that consists of multiple intersecting traffic lanes filled with recklessly driving cars.<br><br>Additionally to the Object Pooling system, I played around with manipulating time (in-game, not in real life) and tried out a different way of structuring my code.</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-sgkJWq895D" id="content4-5w">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Quick overview of results</h2>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features2 cid-sgvAixUdyD" id="features2-6r">
+
+    
+
+    
+    
+    <div class="container">
+        <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="https://youtu.be/_v41jDKHGx8"><img src="assets/images/objectpoolscriptinspector-415x415.png" alt="Tòngkǔ" title=""></a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Created an object pooling system that can be used in the inspector</h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/dynamicpoolableaudioscriptinspector2-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box ">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7"><div>Created a dynamic script for 3D audio that can be pooled</div></h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/rewindcomponentscript-squared-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">Experimented with rewinding objects in time</h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/gamemanager-492x492.png" alt="Mobirise" title="">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7"><div>Experimented with a new way of controlling script execution order&nbsp;</div></h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-shLA7h7FjT" id="content1-78">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8"><em>This page is a work in progress and currently doesn't contain any information about the 3D audio script and the time rewinding mechanic. I plan on writing about these in the future so stay tuned!</em></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-sgkJWrcJkj" id="CodeAnchor">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12"></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-sgkJWrDqGa" id="content4-60">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Let's talk about the code</h2>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cid-sgkJWynWfR" id="social-buttons2-6i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                
+                <div class="social-list pl-0 mb-0">
+                    <a href="https://github.com/Markreel/ObjectPooling/tree/develop" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social mbrib-github" style="font-size: 60px; color: rgb(180, 170, 250); fill: rgb(180, 170, 250);"></span>
+                    </a>
+                    <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                        
+                    </a>
+                    <a href="https://instagram.com/mobirise" target="_blank">
+                        
+                    </a>
+                    <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                        
+                    </a>
+                    <a href="https://www.behance.net/Mobirise" target="_blank">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-sgkJWyOg8t" id="content1-6j">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12"><a href="https://github.com/Markreel/ObjectPooling/tree/develop" target="_blank">Project Repository</a></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-sgkJWuiPB5" id="content4-68">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Creating a dynamic object pooling system</h2>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-shKalmvJdg" id="content1-6v">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-10"><p>The first time I heard of Object Pooling was during my previous education; Game Development at GLU. I implemented it by copying someone else's system, without really understanding what I was doing.</p><p><span style="font-size: 1rem;">Over the years I learned more about it, so when I decided I was going to create the system again, I had a much better understanding of how it should work and what it should accomplish. I refreshed my memory by looking at some C# examples and went straight to work after feeling confident that I could do it for real this time.</span></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content14 cid-shK6Fudzt5" id="content14-6u">
+      
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="row col-12 col-md-12">
+                <div class="col-12 mbr-text mbr-fonts-style col-md-6 display-7">
+                     <p class="p-3"><br>I started off by creating the "Pool" class. It holds all the information the system needs and can be adjusted per pool.<br><br>Each pool has a string that serves as a unique Key which the system uses to differentiate between pools. Additionally the pool stores 2 GameObjects: the prefab that is used to instantiate the object and a reference to an optional parent object.<br><br>Finally, the Pool stores its size and has a boolean that allows it to expand beyond its given starting size when set to true (I'll go into more detail about this later on).</p>
+                </div>
+                <div class="col-12 mbr-text mbr-fonts-style display-7 col-md-6">
+                     <p class="p-3"><br></p>
+                     <iframe src="https://pastebin.com/embed_iframe/gmRNPAys?theme=dark" style="border:none;width:110%;height:230px;scale:10%"></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content14 cid-shKf0QJwmr" id="content14-6w">
+      
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="row col-12 col-md-12">
+                <div class="col-12 mbr-text mbr-fonts-style col-md-6 display-7">
+                     <p class="p-3"><iframe src="https://pastebin.com/embed_iframe/F2JZ5u1p?theme=dark" style="font-size: 1rem; border-width: initial; border-style: none; width: 100%; height: 500px;"></iframe><span style="font-size: 1rem;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></p></div>
+                <div class="col-12 mbr-text mbr-fonts-style display-7 col-md-6">
+                     <p class="p-3"><span style="font-size: 1rem;">Next up was creating the "PooledObject" class. The PooledObject is what we use to store the actual instantiated GameObject. It also stores a reference to an interface called "IPooledObject". This interface is a requirement for each GameObject that needs to be pooled.</span><br></p><p class="p-3"><span style="font-size: 1rem;"><br>The interface keeps a reference to the ObjectPool class so it can despawn itself if needed. It also stores the key of the Pool that the GameObject originates from, so the system knows which Pool to call when dealing with the PooledObject.<br></span><br>Lastly, the interface includes two methods.<br><span style="font-size: 1rem;"><strong>OnObjectSpawn() </strong>and&nbsp;<strong>OnObjectDespawn()</strong>.<br><br></span><span style="font-size: 1rem;">OnObjectSpawn gets called directly after the object is spawned/activated and, unsurprisingly, OnObjectDespawn gets called directly before the object is despawned/deactivated.<br></span></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-shKu7AqhHz" id="content1-6x">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12"><p>Finally, I got to creating the class that controls the entire pooling process, the "ObjectPool".<br>It's just under 200 lines of code, so I won't be going over everything that's in there, but I'll explain enough to convey how the system works.</p><p>Let's start from the top. The ObjectPool class only holds a few variables. It stores a list called "pools" that contains all the Pools. We use this list in the inspector to easily edit the pools.<br><br>Apart from the list, the class also stores a Dictionary which holds Lists of PooledObjects, along with their corresponding Key. This is where we store the instantiated objects so we can modify them later on.<br><br>On start, the ObjectPool class runs through the list of Pools and creates PooledObjects according to their given starting size. The objects are immediately deactivated. From here on, there are two public methods that can be called by external classes:&nbsp;<strong>SpawnFromPool </strong>and <strong>DespawnFromPool</strong>.</p><p>DespawnFromPool deactivates a given PooledObject so that it can be reused by the system.<br>SpawnFromPool activates a PooledObject from a given Pool and applies the given values to the object. If the SpawnFromPool function can't find a deactivated object within the Pool, it can expand the pool, but only if the boolean "AllowExpand" is set to true. If this is the case, the <strong>ExpandPool </strong>method will be called.&nbsp;<span style="font-size: 1rem;">This function simply instantiates an additional object to populate the list of PooledObjects of the given Pool.<br></span></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-shLj03HdhV" id="content1-6y">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8"><p><em>Further down this page, I will explain how I implemented the ObjectPool into the scene.</em></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-sgwdMHSGAt" id="content1-6s">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <iframe src="https://pastebin.com/embed_iframe/T14k2AEi?theme=dark" style="border:none;width:110%;height:500px;scale:10%"></iframe>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-sgkJWrYo5R" id="content4-61">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Taking control of script execution order</h2>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-sgkJWthkmb" id="content1-65">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-10"><p>During my first 2 years of HKU, I talked a lot with our programming teacher, Valentijn. He once showed me a way of programming that I had never tried before and suggested that I should try it sometime. While working on object pooling, I thought it would be the perfect opportunity to finally try the method he was talking about.</p><p>I'm not quite sure what the official name for this method is, but what it comes down to is that you have one overlooking class that stores a reference to all other big systems and manages in what order they are being called. Let's call it the <strong>"Overlooking Executor Method"</strong>&nbsp;(or <strong>OEM </strong>for short) to avoid confusion.</p><p>Using the OEM method allows us to have a clear oversight over what exactly happens in our code, when it happens, and what causes it to happen. The downside is that everything becomes dependent on that one overruling class, which prevents us from using the (sub)classes separately and independently.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content14 cid-sgkJWsfsKk" id="content14-62">
+      
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="row col-12 col-md-12">
+                <div class="col-12 mbr-text mbr-fonts-style col-md-6 display-7">
+                     <p class="p-3">This is how I implemented the OEM method in this project. I've created a "GameManager" class that serves as our overlooker. It stores references to all relevant classes and makes use of a very crude singleton implementation for easy access.<br><br>Unity uses a few methods that are called every frame like <strong>Update</strong>&nbsp;and <strong>FixedUpdate</strong>. These methods are usually called independently on classes, but by using the OEM method, we let the GameManager take full control over calling these functions. We do this by giving the GameManager a <strong>System.Action </strong>for both the Update and FixedUpdate method called OnUpdate and OnFixedUpdate respectively.<br><br>Now, if we want a subclass to use the Update method, we instead create a public method called "OnUpdate". Then, in the Start method of the GameManager, we add the OnUpdate method of all subclasses to the OnUpdate Action and invoke this Action in the actual Update method.<br><br>What's nice, is that, because we add all these OnUpdate methods to the Action one by one, we get a very clear overview of which method gets called first. This can be very useful when working with classes that are circularly dependent on one another.<br><br>Apart from methods that are called each frame, we can add an OnStart method to each subclass that needs it and call it in the actual Start method. In the GameManager script, you'll see that I've used these methods to include references to the other subclasses where needed, which then store them in variables. Having our GameManager class communicate references between subclasses keeps referencing other classes clean and clear to understand!</p>
+                </div>
+                <div class="col-12 mbr-text mbr-fonts-style display-7 col-md-6">
+                     <iframe src="https://pastebin.com/embed_iframe/ATv4rvar?theme=dark" style="border:none;width:110%;height:850px;scale:10%"></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-sgkJWv2yLO" id="content4-6a">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Implementation of both the ObjectPool &amp; the Overlooking Executor Method</h2>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-sgkJWvprOz" id="content1-6b">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-12">To test both systems, I've created a scene with multiple intersecting traffic lanes, filled with cars that are pooled by the ObjectPool and that subscribe their OnFixedUpdate function to the GameManager instead of having their own FixedUpdate method.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content14 cid-shLk8VcZtX" id="content14-6z">
+      
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="row col-12 col-md-12">
+                <div class="col-12 mbr-text mbr-fonts-style col-md-6 display-7">
+                     <p class="p-3"><span style="font-size: 1rem;"><br>This is how we implement the Overlooking Executor Method to our car. We create a method and call it OnFixedUpdate (this could actually be called anything, but by giving the method this name in each class that wants to incorporate it, we can easily identify the functions that are handled by the GameManager.)<br></span><span style="font-size: 1rem;"><br>In th</span><span style="font-size: 1rem;">e</span><span style="font-size: 1rem;"> OnEnable method, we subscribe our new function to the OnFixedUpdate Action of the GameManager, and when OnDisable is called, we unsubscribe from the Action.</span></p>
+                </div>
+                <div class="col-12 mbr-text mbr-fonts-style display-7 col-md-6">
+                     <iframe src="https://pastebin.com/embed_iframe/r0Z8wLpt?theme=dark" style="border:none;width:110%;height:350px;scale:10%"></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content14 cid-shLn7EcUrV" id="content14-70">
+      
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="row col-12 col-md-12">
+                <div class="col-12 mbr-text mbr-fonts-style col-md-6 display-7">
+                     <p class="p-3"><iframe src="https://pastebin.com/embed_iframe/wdzEGAjF?theme=dark" style="font-size: 1rem; border-width: initial; border-style: none; width: 100%; height: 400px;"></iframe><span style="font-size: 1rem;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></p></div>
+                <div class="col-12 mbr-text mbr-fonts-style display-7 col-md-6">
+                     <p class="p-3"><span style="font-size: 1rem;">To convert the car class into a PooledObject we supply it with the IPooledObject interface, which requires us to implement the members of the interface. We now want our car to be destroyed when hitting something, so once we've checked for collision, we use the reference to the ObjectPool to call the DespawnFromPool method. We input our Key and GameObject and voilà, we're all done!<br></span><span style="font-size: 1rem;"><br>As you can see, we have also added some functionality to the OnObjectSpawn function. We want the car to change to a random colour each time it "spawns". Normally we'd just call this in the Awake or Start method, but since those only get called once when the object is created, we need to use our OnObjectSpawn method instead!</span></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-shLunsZQIs" id="content1-75">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-8">All in all, this was a really fun and educational side-project! I've successfully created an ObjectPool and experimented with a different approach on handling code!</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content8 cid-shLvEgo9D9" id="content8-77">
+
+    
+
+    <div class="container">
+        <div class="media-container-row title">
+            <div class="col-12 col-md-8">
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="Object Pooling.html#top">BACK TO TOP OF PAGE</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cid-shLtSiVbOX" id="content13-73">
+    
+    <div class="container">
+            <div class="media-container-row" style="width: 70%;">
+                <div class="img-item item1" style="width: 228%;">
+                    <img src="assets/images/sceneview-1.gif" alt="" title="">
+                    <div class="img-caption">
+                        <p class="mbr-fonts-style align-center mbr-black display-7">
+                            Final Result!</p>
+                    </div>
+                </div>
+                <div class="img-item">
+                    <img src="assets/images/objectpoolscriptinspector-415x415.png" alt="" title="">
+                    <div class="img-caption">
+                        <p class="mbr-fonts-style align-center mbr-black display-7">
+                            Object Pool</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+  <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+  <script src="assets/sociallikes/social-likes.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/witsec-mailform/witsec-mailform.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+ <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+  </body>
+</html>
